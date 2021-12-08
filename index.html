@@ -9,110 +9,184 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/142269745b.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
-    <p id = "Acceuil"></p>
-    <div class="titre">
-        <h1>Kévin Chevallier</h1>
-    </div>
-    <figcaption>Kévin Chevallier, 8 janvier 2002</figcaption>
-
-    <div id="info">
+<body id = "Acceuil">
+    
+    <div class="info">
+        
         <ul>
             <li><a href="#contacts">Contacts</a></li>
             <li><a href="Apropos" >A propos</a></li>
             <li><a href="#Projets">Projets</a></li>
             <li><a href="#Acceuil">Acceuil</a></li>
-            <p>Kévin Chevallier</p>
+            
 
         </ul>
+        
     </div>
+
+    <div class="titre">
+        <h1>Kévin Chevallier</h1>
+    </div>
+    <figcaption>Kévin Chevallier, 8 janvier 2002</figcaption>
+
+  
+  
+
+
+    
+  
+  
     <div class="photoPositionement">
-        <p><a href="images/photo_grand_test.png"><img src="images/photo_mini_test_.JPEG" alt="photo d'un avatar" class="photo"></a></p>
-    </div>
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/img_snow_wide.jpg" style="width:100%" alt="neige">
-            <div class="text">Caption Text</div>
-        </div>
-    
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/img_nature_wide.jpg" style="width:100%" alt="nature">
-            <div class="text">Caption Two</div>
-        </div>
-    
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/img_mountains_wide.jpg" style="width:100%" alt="montagnes">
-        <div class="text">Caption Three</div>
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
+        <p><a href="images/photo_kevin.png"><img src="images/photo_kevin.png" alt="photo d'un avatar" class="photo"></a></p>
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
-
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/logo_iracing5.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/logo2_fanatec.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/ACC4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
     <p id = "Projets"></p>
     <div class="AnnonceProjets"
         <h3>Projets :</h3>
     </div>
 
-    <section id="projets">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <img class="w-100" src="images/handbrake.jpg" alt="Frein à main Fanatec">
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <p>Fanatec</p>
+                            <p>Glissez dans les virages à l'aide du frein à main ClubSport V1.5 et effectuez des drifts parfaits dans les simulations de rallye et de drift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-warning">
+                        <div class="card-body">
+                            <img class="w-100" src="images/shifter.jpg" alt="Levier de vitesse Fanatec">  
+                        </div>
+                    </div>
+                    <div class="card-back bg-dark text-white">
+                        <div class="card-body">
+                            <p>Fanatec</p>
+                            <p>Le ClubSport Shifter est entièrement fabriqué en métal, ce qui signifie : qualité, durabilité et fiabilité intégrées.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-primary">
+                        <div class="card-body">
+                            <img class="w-100" src="images/pedals.jpg" alt="Pédalier">
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body text-primary">
+                            <p>Fanatec</p>
+                            <p>Le ClubSport Shifter est entièrement fabriqué en métal, ce qui signifie : qualité, durabilité et fiabilité intégrées.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <img class="w-100" src="images/volant_moteur.jpg" alt="Volant avec le moteur">
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <p>Fanatec</p>
+                            <p>Tout est dans les détails. Nos milliers d'heures de conception signifient que vous pouvez simplement conduire et profiter.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-danger">
+                        <div class="card-body">
+                            <img class="w-100" src="images/set_up.jpeg" alt="Cockpit Fanatec">
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <p>Fanatec</p>
+                            <p>Découvrez la nouvelle version de notre cockpit RennSport à la pointe de la technologie et découvrez de grandes améliorations sur des fonctionnalités essentielles telles que la stabilité ou l'ajustabilité. Ils amélioreront considérablement votre expérience de course.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 my-3">
+                <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-success">
+                        <div class="card-body">
+                            <img class="w-100" src="images/moteur.jpg" alt="Moteur pour volants">
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <p>Fanatec</p>
+                            <p>Présentation du Podium DD2, l'expérience ultime à retour de force. Une technologie de pointe, des performances incroyables. Tout simplement la solution d'entraînement direct la plus avancée jamais conçue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<section id="projets">
 
         <div class="flip-card">
             
         
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/iwatch.png" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/handbrake.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>frein à main clubsport handbrake v1.5</p> 
+                    <p>Glissez dans les virages à l'aide du frein à main ClubSport V1.5 et effectuez des drifts parfaits dans les simulations de rallye et de drift.</p>
+                    
                 </div>
             </div>
 
@@ -121,12 +195,13 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/photo_mini_test_.JPEG" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/shifter.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>levier de vitesse clubsport shifter sq v 1.5</p> 
+                    <p>Le ClubSport Shifter est entièrement fabriqué en métal, ce qui signifie : qualité, durabilité et fiabilité intégrées.</p>
+                    
                 </div>
             </div>
         </div>
@@ -134,12 +209,13 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/photo_mini_test_.JPEG" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/pedals.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>Clubsport pedales V3 damper kit</p> 
+                    <p>L'amortisseur hydraulique en plus de la cellule de charge sensible à la pression vous donne la sensation familière d'un frein hydraulique.</p>
+                    
                 </div>
             </div>
         </div>
@@ -151,12 +227,13 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/photo_mini_test_.JPEG" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/volant_moteur.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>Podium racing wheel F1</p>
+                    <p>Tout est dans les détails. Nos milliers d'heures de conception signifient que vous pouvez simplement piloter et profiter.</p> 
+                    
                 </div>
             </div>
         </div>
@@ -164,12 +241,14 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/photo_mini_test_.JPEG" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/set_up.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>Rennsport-cockpit-v2</p> 
+                    <p>Discover the new version of our state-of-the-art RennSport Cockpit and experience great improvements on essential features like stability or adjustability. They will significantly enhance your racing experience.
+                    </p>
+                    
                 </div>
             </div>
         </div>
@@ -177,35 +256,79 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/photo_mini_test_.JPEG" alt="test flip card" style="width:300px;height:300px;">
+                    <img src="images/moteur.jpg" alt="test flip card" style="width:330px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1> 
-                    <p>Architect & Engineer</p> 
-                    <p>We love that guy</p>
+                    <h1>Fanatec</h1> 
+                    <p>Podium Wheel base DD2</p>
+                    <p>Présentation du Podium DD2, l'expérience ultime à retour de force. Une technologie de pointe, des performances incroyables. Tout simplement la solution d'entraînement direct la plus avancée jamais conçue.</p>
+                    
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <p id = "contacts"></p>
-    <div class="formulaire"
-        <form action="/ma-page-de-traitement" method="post">
-            <div>
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="user_name">
-            </div>
-            <div>
-                <label for="mail">e-mail :</label>
-                <input type="email" id="mail" name="user_mail">
-            </div>
-            <div>
-                <label for="msg">Message :</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </div>
-            <div class="button">
-                <button type="submit">Envoyer le message</button>
-            </div>
-        </form>
+
+
+    <div class ="formulaire_bootstrap container">
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
+
+
+    <div class="bas">
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                
+          
+               
+          
+                
+          
+                
+          
+                <!-- Discord -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://discord.com/" target="-blank" role="button"
+                ><i class="fab fa-discord"></i
+                ></a>
+          
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="" role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+              </section>
+              <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Signature -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Kévin Chevallier
+            </div>
+            <!-- Signature -->
+          
+            
+          </footer>
+    </div>
+
+
+
 </body>
 </html>
