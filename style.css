@@ -1,9 +1,14 @@
 body
 {
-  
   margin:0;
   padding:0;
-  
+}
+
+/* Centrer H2 */
+
+.h2
+{
+  justify-content: center;
 }
 
 .info
@@ -59,13 +64,6 @@ h1
   padding-bottom: 5px;
 }
 
-h1:hover
-{
-  -webkit-animation: text-shadow-drop-bl 0.6s both;
-  animation: text-shadow-drop-bl 0.6s both;
-}
-
-
 .formulaire_bootstrap
 {
   padding-top: 100px;
@@ -77,7 +75,6 @@ h1:hover
   background-color: transparent;
   width: 300px;
   height: 200px;
-  /*border: 1px solid #f1f1f1;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -113,7 +110,7 @@ h1:hover
 
 /* Style the back side */
 .flip-card-back {
-  background-color: blue;
+  background-color:blue;
   color: white;
   transform: rotateY(180deg);
 }
@@ -158,6 +155,8 @@ flip card system
   height: 300px;
 }
 
+/* Retouche des images */
+
 .card img {
   position:absolute;
   top: 0;
@@ -170,18 +169,21 @@ flip card system
   max-height:100%;
 }
 
+
+/* Placement du lien dans les flip card */
+
 .card-body a {
   position: absolute;
   bottom: 15px;
   right: 15px;
 }
 
+/* Cela permet au formulaire d'avoir une taille maximum de 500 pixels peut importe la taille de l'écran */
+
 .form-control
 {
   max-width: 500px;
 }
 
-.h2
-{
-  justify-content: center;
-}
+
+
